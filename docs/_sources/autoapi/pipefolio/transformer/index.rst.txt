@@ -1,0 +1,87 @@
+pipefolio.transformer
+=====================
+
+.. py:module:: pipefolio.transformer
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/pipefolio/transformer/price_to_return/index
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.transformer.PriceToReturnTransformer
+
+
+Package Contents
+----------------
+
+.. py:class:: PriceToReturnTransformer(log_returns = False)
+
+   Bases: :py:obj:`pipefolio.mixins.TransformerPipeMixin`, :py:obj:`sklearn.base.TransformerMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.transformer.PriceToReturnTransformer
+      :parts: 1
+      :private-bases:
+
+
+   TransformerPipeMixin class that provides pipe operators for transformer classes.
+
+   This mixin enables the use of the pipe operator (`|`) and the reverse pipe operator
+   (`|`) with transformer classes, allowing for seamless integration with other
+   classes that take a DataPlaceHolder as input.
+
+   Attributes:
+
+   .. method:: __or__(self, other
+
+      BaseOptimization):
+      Applies the fit_transform method if the other object is an instance of BaseOptimization.
+      Raises a TypeError if the operation is not supported for the given types.
+
+   .. method:: __ror__(self, other
+
+      DataPlaceHolder):
+      Applies the fit_transform method if the other object is an instance of DataPlaceHolder.
+      Raises a TypeError if the operation is not supported for the given types.
+      
+
+
+   .. py:attribute:: log_returns
+      :value: False
+
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the transformer.
+
+      :param X: The input data to fit.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted transformer.
+      :rtype: Self
+
+
+
+   .. py:method:: transform(X)
+
+      Transform input data from prices to returns.
+
+      :param X: The input data to transform.
+      :type X: DataPlaceHolder
+
+      :returns: The transformed data with returns instead of prices.
+      :rtype: DataPlaceHolder
+
+
+

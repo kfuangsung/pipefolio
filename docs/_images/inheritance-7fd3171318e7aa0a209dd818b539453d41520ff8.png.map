@@ -1,0 +1,9 @@
+<map id="inheritanced19388e69a" name="inheritanced19388e69a">
+<area shape="rect" id="node1" href="../../mixins/index.html#pipefolio.mixins.AdaptorPipeMixin" target="_top" title="AdaptorPipeMixin class that provides a reverse pipe operator for optimization objects." alt="" coords="283,5,420,31"/>
+<area shape="rect" id="node7" href="#pipefolio.adaptor.weight_arr.WeightArrayAdaptor" target="_top" title="Adaptor to convert optimization result&#39;s weights to a numpy array." alt="" coords="468,55,621,80"/>
+<area shape="rect" id="node2" title="Base class for all estimators in scikit&#45;learn." alt="" coords="293,55,410,80"/>
+<area shape="rect" id="node3" title="Mixin class allowing to generate a link to the API documentation." alt="" coords="5,5,235,31"/>
+<area shape="rect" id="node4" title="Mixin class for adding metadata request functionality." alt="" coords="41,55,199,80"/>
+<area shape="rect" id="node5" title="Mixin class for all transformers in scikit&#45;learn." alt="" coords="283,104,419,129"/>
+<area shape="rect" id="node6" title="Mixin that dynamically wraps methods to return container based on config." alt="" coords="55,104,185,129"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="inheritance329d441dba" name="inheritance329d441dba">
+<area shape="rect" id="node1" title="Base class for all estimators in scikit&#45;learn." alt="" coords="293,104,411,129"/>
+<area shape="rect" id="node5" href="tot_ret/index.html#pipefolio.selector.tot_ret.TotalReturnSelector" target="_top" title="Selector to choose assets based on total returns." alt="" coords="469,55,619,80"/>
+<area shape="rect" id="node2" title="Mixin class allowing to generate a link to the API documentation." alt="" coords="5,104,235,129"/>
+<area shape="rect" id="node3" title="Mixin class for adding metadata request functionality." alt="" coords="41,153,199,179"/>
+<area shape="rect" id="node4" href="../mixins/index.html#pipefolio.mixins.SelectorPipeMixin" target="_top" title="SelectorPipeMixin class that provides a reverse pipe operator for selector classes." alt="" coords="283,5,421,31"/>
+<area shape="rect" id="node6" title="Mixin class for all transformers in scikit&#45;learn." alt="" coords="284,55,420,80"/>
+<area shape="rect" id="node7" title="Mixin that dynamically wraps methods to return container based on config." alt="" coords="55,55,185,80"/>
+</map>

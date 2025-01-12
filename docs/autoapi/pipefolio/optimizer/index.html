@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pipefolio.optimizer &#8212; Pipefolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/pipefolio/optimizer/index';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="pipefolio.optimizer.equal" href="equal/index.html" />
+    <link rel="prev" title="pipefolio.mixins" href="../mixins/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Pipefolio</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/kfuangsung/pipefolio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/kfuangsung/pipefolio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">pipefolio</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../adaptor/index.html">pipefolio.adaptor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../adaptor/weight_arr/index.html">pipefolio.adaptor.weight_arr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../adaptor/weight_map/index.html">pipefolio.adaptor.weight_map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">pipefolio.data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enums/index.html">pipefolio.enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mixins/index.html">pipefolio.mixins</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">pipefolio.optimizer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="equal/index.html">pipefolio.optimizer.equal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inverse_vlty/index.html">pipefolio.optimizer.inverse_vlty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="max_ratio/index.html">pipefolio.optimizer.max_ratio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="max_ret/index.html">pipefolio.optimizer.max_ret</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mean_risk/index.html">pipefolio.optimizer.mean_risk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="min_risk/index.html">pipefolio.optimizer.min_risk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risk_averse/index.html">pipefolio.optimizer.risk_averse</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../selector/index.html">pipefolio.selector</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../selector/ann_vlty/index.html">pipefolio.selector.ann_vlty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selector/avg_trade_value/index.html">pipefolio.selector.avg_trade_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selector/tot_ret/index.html">pipefolio.selector.tot_ret</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transformer/index.html">pipefolio.transformer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transformer/price_to_return/index.html">pipefolio.transformer.price_to_return</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">pipefolio</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">pipefolio.optimizer</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-pipefolio.optimizer">
+<span id="pipefolio-optimizer"></span><h1>pipefolio.optimizer<a class="headerlink" href="#module-pipefolio.optimizer" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="equal/index.html">pipefolio.optimizer.equal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inverse_vlty/index.html">pipefolio.optimizer.inverse_vlty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="max_ratio/index.html">pipefolio.optimizer.max_ratio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="max_ret/index.html">pipefolio.optimizer.max_ret</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mean_risk/index.html">pipefolio.optimizer.mean_risk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="min_risk/index.html">pipefolio.optimizer.min_risk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risk_averse/index.html">pipefolio.optimizer.risk_averse</a></li>
+</ul>
+</div>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pipefolio.optimizer.EqualWeightOptimizer" title="pipefolio.optimizer.EqualWeightOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EqualWeightOptimizer</span></code></a></p></td>
+<td><p>Optimizer that uses the EqualWeighted optimization model from skfolio.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pipefolio.optimizer.InverseVolatilityOptimizer" title="pipefolio.optimizer.InverseVolatilityOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InverseVolatilityOptimizer</span></code></a></p></td>
+<td><p>Optimizer that uses the Inverse Volatility optimization model from skfolio.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pipefolio.optimizer.MaxRatioOptimizer" title="pipefolio.optimizer.MaxRatioOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaxRatioOptimizer</span></code></a></p></td>
+<td><p>Optimizer that uses the MeanRisk optimization model from skfolio to maximize the ratio of return to risk.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pipefolio.optimizer.MaxReturnOptimizer" title="pipefolio.optimizer.MaxReturnOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaxReturnOptimizer</span></code></a></p></td>
+<td><p>Optimizer that uses the MeanRisk optimization model to maximize return.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pipefolio.optimizer.MeanRiskOptimizer" title="pipefolio.optimizer.MeanRiskOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeanRiskOptimizer</span></code></a></p></td>
+<td><p>Optimizer using the MeanRisk model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pipefolio.optimizer.MinRiskOptimizer" title="pipefolio.optimizer.MinRiskOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MinRiskOptimizer</span></code></a></p></td>
+<td><p>Optimizer that uses the MeanRisk optimization model from skfolio to minimize risk.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pipefolio.optimizer.RiskAverseOptimizer" title="pipefolio.optimizer.RiskAverseOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiskAverseOptimizer</span></code></a></p></td>
+<td><p>Optimizer that uses the MeanRisk optimization model to maximize utility</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.EqualWeightOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">EqualWeightOptimizer</span></span><a class="headerlink" href="#pipefolio.optimizer.EqualWeightOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-d0f0f0f2e1478a59022b28c17c5d341db9647f96.png" alt="Inheritance diagram of pipefolio.optimizer.EqualWeightOptimizer" usemap="#inheritanceacc8a3dc8e" class="inheritance graphviz" /></div>
+<map id="inheritanceacc8a3dc8e" name="inheritanceacc8a3dc8e">
+<area shape="rect" id="node4" href="equal/index.html#pipefolio.optimizer.equal.EqualWeightOptimizer" target="_top" title="Optimizer that uses the EqualWeighted optimization model from skfolio." alt="" coords="481,31,648,56"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer that uses the EqualWeighted optimization model from skfolio.</p>
+<p>This optimizer will use the EqualWeighted optimization model from skfolio to
+optimize the weights of the input data. The optimization model is initialized
+in the constructor and fit to the data using the <cite>fit</cite> method.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.EqualWeightOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.EqualWeightOptimizer.model" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.EqualWeightOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.EqualWeightOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fits the EqualWeighted model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted EqualWeighted model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>EqualWeighted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.EqualWeightOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.EqualWeightOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predicts using the EqualWeighted model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the EqualWeighted model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.InverseVolatilityOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">InverseVolatilityOptimizer</span></span><a class="headerlink" href="#pipefolio.optimizer.InverseVolatilityOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-3129e174e5fb718b7e335a50c9548e9b9b1dce68.png" alt="Inheritance diagram of pipefolio.optimizer.InverseVolatilityOptimizer" usemap="#inheritance6b363e6222" class="inheritance graphviz" /></div>
+<map id="inheritance6b363e6222" name="inheritance6b363e6222">
+<area shape="rect" id="node4" href="inverse_vlty/index.html#pipefolio.optimizer.inverse_vlty.InverseVolatilityOptimizer" target="_top" title="Optimizer that uses the Inverse Volatility optimization model from skfolio." alt="" coords="481,31,673,56"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer that uses the Inverse Volatility optimization model from skfolio.</p>
+<p>This optimizer utilizes the Inverse Volatility optimization model to
+allocate weights inversely proportional to the volatility of the assets.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.InverseVolatilityOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.InverseVolatilityOptimizer.model" title="Link to this definition">#</a></dt>
+<dd><p>An instance of the InverseVolatility optimization model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id0" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.InverseVolatilityOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.InverseVolatilityOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fit the InverseVolatility model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted InverseVolatility model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>InverseVolatility</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.InverseVolatilityOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.InverseVolatilityOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predict using the InverseVolatility model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the InverseVolatility model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxRatioOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">MaxRatioOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">risk_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RiskMetric.VARIANCE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MaxRatioOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-b8189a16f913d48f2bf83902a01ca376bf5cb12b.png" alt="Inheritance diagram of pipefolio.optimizer.MaxRatioOptimizer" usemap="#inheritance5e5336c883" class="inheritance graphviz" /></div>
+<map id="inheritance5e5336c883" name="inheritance5e5336c883">
+<area shape="rect" id="node4" href="max_ratio/index.html#pipefolio.optimizer.max_ratio.MaxRatioOptimizer" target="_top" title="Optimizer that uses the MeanRisk optimization model from skfolio to maximize the ratio of return to risk." alt="" coords="481,31,629,56"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer that uses the MeanRisk optimization model from skfolio to maximize the ratio of return to risk.</p>
+<p>The optimization model is initialized in the constructor and fit to the data using the <cite>fit</cite> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>risk_metric</strong> (<a class="reference internal" href="../enums/index.html#pipefolio.enums.RiskMetric" title="pipefolio.enums.RiskMetric"><em>pipefolio.enums.RiskMetric</em></a>)</p></li>
+<li><p><strong>min_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>)</p></li>
+<li><p><strong>max_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxRatioOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.MaxRatioOptimizer.model" title="Link to this definition">#</a></dt>
+<dd><p>The MeanRisk optimization model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id1" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxRatioOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MaxRatioOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fits the MeanRisk model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted MaxRatioOptimizer model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>skfolio.optimization.MeanRisk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxRatioOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MaxRatioOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predicts using the MeanRisk model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the MeanRisk model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxReturnOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">MaxReturnOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MaxReturnOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-89ab938000542db0cfeb92a0e4e00eafadef5e16.png" alt="Inheritance diagram of pipefolio.optimizer.MaxReturnOptimizer" usemap="#inheritance5db3cc1f2d" class="inheritance graphviz" /></div>
+<map id="inheritance5db3cc1f2d" name="inheritance5db3cc1f2d">
+<area shape="rect" id="node4" href="max_ret/index.html#pipefolio.optimizer.max_ret.MaxReturnOptimizer" target="_top" title="Optimizer that uses the MeanRisk optimization model to maximize return." alt="" coords="481,31,639,56"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer that uses the MeanRisk optimization model to maximize return.</p>
+<p>The optimization model is initialized in the constructor and fit to the data
+using the <cite>fit</cite> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>)</p></li>
+<li><p><strong>max_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxReturnOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.MaxReturnOptimizer.model" title="Link to this definition">#</a></dt>
+<dd><p>The MeanRisk optimization model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id2" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxReturnOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MaxReturnOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fits the MeanRisk model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted MaxReturnOptimizer model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>skfolio.optimization.MeanRisk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MaxReturnOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MaxReturnOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predicts using the MeanRisk model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the MeanRisk model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MeanRiskOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">MeanRiskOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">OptimizeObjective.MINIMIZE_RISK</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RiskMetric.VARIANCE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_aversion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MeanRiskOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-c9d3115feb122380a29a33b998fbff94d80a1583.png" alt="Inheritance diagram of pipefolio.optimizer.MeanRiskOptimizer" usemap="#inheritance543b88f79a" class="inheritance graphviz" /></div>
+<map id="inheritance543b88f79a" name="inheritance543b88f79a">
+<area shape="rect" id="node4" href="mean_risk/index.html#pipefolio.optimizer.mean_risk.MeanRiskOptimizer" target="_top" title="Optimizer using the MeanRisk model." alt="" coords="481,31,632,56"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer using the MeanRisk model.</p>
+<p>This class is deprecated. Use MaxReturnOptimizer, MinRiskOptimizer, or
+RiskAverseOptimizer instead.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MeanRiskOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.MeanRiskOptimizer.model" title="Link to this definition">#</a></dt>
+<dd><p>The MeanRisk optimization model.</p>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objective</strong> (<a class="reference internal" href="../enums/index.html#pipefolio.enums.OptimizeObjective" title="pipefolio.enums.OptimizeObjective"><em>pipefolio.enums.OptimizeObjective</em></a>) – The optimization objective.</p></li>
+<li><p><strong>risk_metric</strong> (<a class="reference internal" href="../enums/index.html#pipefolio.enums.RiskMetric" title="pipefolio.enums.RiskMetric"><em>pipefolio.enums.RiskMetric</em></a>) – The risk metric to use.</p></li>
+<li><p><strong>risk_aversion</strong> (<em>float</em>) – The level of risk aversion.</p></li>
+<li><p><strong>min_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) – The minimum weights for the optimization.</p></li>
+<li><p><strong>max_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) – The maximum weights for the optimization.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MeanRiskOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MeanRiskOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fits the MeanRisk model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted MeanRisk model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>skfolio.optimization.MeanRisk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MeanRiskOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MeanRiskOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predicts using the MeanRisk model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the MeanRisk model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MinRiskOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">MinRiskOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">risk_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RiskMetric.VARIANCE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MinRiskOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-2a2270ccaec93bccf5242f26c55b7ac557b06a9c.png" alt="Inheritance diagram of pipefolio.optimizer.MinRiskOptimizer" usemap="#inheritance03399d1a3b" class="inheritance graphviz" /></div>
+<map id="inheritance03399d1a3b" name="inheritance03399d1a3b">
+<area shape="rect" id="node4" href="min_risk/index.html#pipefolio.optimizer.min_risk.MinRiskOptimizer" target="_top" title="Optimizer that uses the MeanRisk optimization model from skfolio to minimize risk." alt="" coords="481,31,620,56"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer that uses the MeanRisk optimization model from skfolio to minimize risk.</p>
+<p>The optimization model is initialized in the constructor and fit to the data
+using the <cite>fit</cite> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>risk_metric</strong> (<a class="reference internal" href="../enums/index.html#pipefolio.enums.RiskMetric" title="pipefolio.enums.RiskMetric"><em>pipefolio.enums.RiskMetric</em></a>)</p></li>
+<li><p><strong>min_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>)</p></li>
+<li><p><strong>max_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MinRiskOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.MinRiskOptimizer.model" title="Link to this definition">#</a></dt>
+<dd><p>The MeanRisk optimization model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id4" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MinRiskOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MinRiskOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fits the MeanRisk model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted MinRiskOptimizer model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>skfolio.optimization.MeanRisk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.MinRiskOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.MinRiskOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predicts using the MeanRisk model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the MeanRisk model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.optimizer.RiskAverseOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.optimizer.</span></span><span class="sig-name descname"><span class="pre">RiskAverseOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">risk_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RiskMetric.VARIANCE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_aversion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.RiskAverseOptimizer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" title="pipefolio.mixins.OptimizerPipeMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipefolio.mixins.OptimizerPipeMixin</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-ba2c1eb6e8489421b9c57bcbcf70d0c375d3dc90.png" alt="Inheritance diagram of pipefolio.optimizer.RiskAverseOptimizer" usemap="#inheritanced256f84576" class="inheritance graphviz" /></div>
+<map id="inheritanced256f84576" name="inheritanced256f84576">
+<area shape="rect" id="node5" href="risk_averse/index.html#pipefolio.optimizer.risk_averse.RiskAverseOptimizer" target="_top" title="Optimizer that uses the MeanRisk optimization model to maximize utility" alt="" coords="481,31,640,56"/>
+<area shape="rect" id="node4" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map><p>Optimizer that uses the MeanRisk optimization model to maximize utility
+while considering risk aversion.</p>
+<p>The optimization model is initialized in the constructor and fit to the data
+using the <cite>fit</cite> method.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.optimizer.RiskAverseOptimizer.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pipefolio.optimizer.RiskAverseOptimizer.model" title="Link to this definition">#</a></dt>
+<dd><p>The MeanRisk optimization model.</p>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>risk_metric</strong> (<a class="reference internal" href="../enums/index.html#pipefolio.enums.RiskMetric" title="pipefolio.enums.RiskMetric"><em>pipefolio.enums.RiskMetric</em></a>) – The risk metric to use for optimization.</p></li>
+<li><p><strong>risk_aversion</strong> (<em>float</em>) – The level of risk aversion in the optimization.</p></li>
+<li><p><strong>min_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) – The minimum weights for the optimization.</p></li>
+<li><p><strong>max_weights</strong> (<em>float</em><em> | </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) – The maximum weights for the optimization.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#id5" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.RiskAverseOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.RiskAverseOptimizer.fit" title="Link to this definition">#</a></dt>
+<dd><p>Fits the MeanRisk model to the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data to fit the model.</p></li>
+<li><p><strong>y</strong> – Optional additional data (unused).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The fitted RiskAverseOptimizer model.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>skfolio.optimization.MeanRisk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pipefolio.optimizer.RiskAverseOptimizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.optimizer.RiskAverseOptimizer.predict" title="Link to this definition">#</a></dt>
+<dd><p>Predicts using the MeanRisk model with the provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<a class="reference internal" href="../data/index.html#pipefolio.data.DataPlaceHolder" title="pipefolio.data.DataPlaceHolder"><em>pipefolio.data.DataPlaceHolder</em></a>) – The input data for making predictions.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions made by the MeanRisk model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../mixins/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">pipefolio.mixins</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="equal/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pipefolio.optimizer.equal</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-contents">Package Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.EqualWeightOptimizer"><code class="docutils literal notranslate"><span class="pre">EqualWeightOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.EqualWeightOptimizer.model"><code class="docutils literal notranslate"><span class="pre">EqualWeightOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.EqualWeightOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">EqualWeightOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.EqualWeightOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">EqualWeightOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.InverseVolatilityOptimizer"><code class="docutils literal notranslate"><span class="pre">InverseVolatilityOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.InverseVolatilityOptimizer.model"><code class="docutils literal notranslate"><span class="pre">InverseVolatilityOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">InverseVolatilityOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.InverseVolatilityOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">InverseVolatilityOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.InverseVolatilityOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">InverseVolatilityOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxRatioOptimizer"><code class="docutils literal notranslate"><span class="pre">MaxRatioOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxRatioOptimizer.model"><code class="docutils literal notranslate"><span class="pre">MaxRatioOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><code class="docutils literal notranslate"><span class="pre">MaxRatioOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxRatioOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">MaxRatioOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxRatioOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">MaxRatioOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxReturnOptimizer"><code class="docutils literal notranslate"><span class="pre">MaxReturnOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxReturnOptimizer.model"><code class="docutils literal notranslate"><span class="pre">MaxReturnOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><code class="docutils literal notranslate"><span class="pre">MaxReturnOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxReturnOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">MaxReturnOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MaxReturnOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">MaxReturnOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MeanRiskOptimizer"><code class="docutils literal notranslate"><span class="pre">MeanRiskOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MeanRiskOptimizer.model"><code class="docutils literal notranslate"><span class="pre">MeanRiskOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MeanRiskOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MeanRiskOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">MeanRiskOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MeanRiskOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">MeanRiskOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MinRiskOptimizer"><code class="docutils literal notranslate"><span class="pre">MinRiskOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MinRiskOptimizer.model"><code class="docutils literal notranslate"><span class="pre">MinRiskOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><code class="docutils literal notranslate"><span class="pre">MinRiskOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MinRiskOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">MinRiskOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.MinRiskOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">MinRiskOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.RiskAverseOptimizer"><code class="docutils literal notranslate"><span class="pre">RiskAverseOptimizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.RiskAverseOptimizer.model"><code class="docutils literal notranslate"><span class="pre">RiskAverseOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><code class="docutils literal notranslate"><span class="pre">RiskAverseOptimizer.model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.RiskAverseOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">RiskAverseOptimizer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.optimizer.RiskAverseOptimizer.predict"><code class="docutils literal notranslate"><span class="pre">RiskAverseOptimizer.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/pipefolio/optimizer/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Kachain Fuangsung.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

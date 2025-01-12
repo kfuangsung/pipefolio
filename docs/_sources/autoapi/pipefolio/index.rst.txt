@@ -1,0 +1,36 @@
+pipefolio
+=========
+
+.. py:module:: pipefolio
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/pipefolio/adaptor/index
+   /autoapi/pipefolio/data/index
+   /autoapi/pipefolio/enums/index
+   /autoapi/pipefolio/mixins/index
+   /autoapi/pipefolio/optimizer/index
+   /autoapi/pipefolio/selector/index
+   /autoapi/pipefolio/transformer/index
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   pipefolio.__version__
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+   :value: '0.0.1'
+
+

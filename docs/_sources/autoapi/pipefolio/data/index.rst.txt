@@ -1,0 +1,184 @@
+pipefolio.data
+==============
+
+.. py:module:: pipefolio.data
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.data.OHLCV
+   pipefolio.data.DataPlaceHolder
+
+
+Module Contents
+---------------
+
+.. py:class:: OHLCV
+
+   Bases: :py:obj:`tuple`
+
+   .. autoapi-inheritance-diagram:: pipefolio.data.OHLCV
+      :parts: 1
+      :private-bases:
+
+
+   .. py:attribute:: open
+
+
+   .. py:attribute:: high
+
+
+   .. py:attribute:: low
+
+
+   .. py:attribute:: close
+
+
+   .. py:attribute:: volume
+
+
+.. py:class:: DataPlaceHolder
+
+   A placeholder for financial data with OHLCV structure.
+
+   .. attribute:: data
+
+      A pandas DataFrame containing financial data.
+
+   .. attribute:: symbols
+
+      A list of asset symbols.
+
+   .. attribute:: ohlcv
+
+      An OHLCV namedtuple mapping data columns.
+
+   .. attribute:: period
+
+      The data period (e.g., daily, weekly).
+
+   .. attribute:: start
+
+      The start timestamp of the data.
+
+   .. attribute:: end
+
+      The end timestamp of the data.
+
+   .. attribute:: price_col
+
+      The column to use as price data.
+
+
+   .. py:attribute:: data
+      :type:  pandas.DataFrame
+
+
+   .. py:attribute:: symbols
+      :type:  list[str]
+
+
+   .. py:attribute:: ohlcv
+      :type:  OHLCV
+
+
+   .. py:attribute:: period
+      :type:  pipefolio.enums.DataPeriod
+
+
+   .. py:attribute:: start
+      :type:  pandas.Timestamp
+
+
+   .. py:attribute:: end
+      :type:  pandas.Timestamp
+
+
+   .. py:attribute:: price_col
+      :type:  pipefolio.enums.DataColumn
+      :value: None
+
+
+
+   .. py:method:: from_dataframe(data, ohlcv = OHLCV('Open', 'High', 'Low', 'Close', 'Volume'), period = DataPeriod.DAILY, price_col = DataColumn.CLOSE)
+      :classmethod:
+
+
+      Create a DataPlaceHolder from a DataFrame.
+
+      :param data: A pandas DataFrame with a MultiIndex for columns.
+      :param ohlcv: An OHLCV namedtuple to map data columns.
+      :param period: The data period.
+      :param price_col: The column to use as price data.
+
+      :returns: A DataPlaceHolder instance.
+
+
+
+   .. py:property:: open
+      :type: pandas.DataFrame
+
+
+      Get the open prices.
+
+
+   .. py:property:: high
+      :type: pandas.DataFrame
+
+
+      Get the high prices.
+
+
+   .. py:property:: low
+      :type: pandas.DataFrame
+
+
+      Get the low prices.
+
+
+   .. py:property:: close
+      :type: pandas.DataFrame
+
+
+      Get the close prices.
+
+
+   .. py:property:: volume
+      :type: pandas.DataFrame
+
+
+      Get the volume data.
+
+
+   .. py:property:: price
+      :type: pandas.DataFrame
+
+
+      Get the selected price column based on `price_col`.
+
+      :returns: The DataFrame for the selected price column.
+
+
+   .. py:method:: select_symbols(symbols)
+
+      Select data for specific symbols.
+
+      :param symbols: An iterable of asset symbols.
+
+      :returns: A DataFrame with data for the specified symbols.
+
+
+
+   .. py:method:: copy_with_new_data(data)
+
+      Create a copy of the instance with new data.
+
+      :param data: A pandas DataFrame with new data.
+
+      :returns: A new DataPlaceHolder instance with the updated data.
+
+
+

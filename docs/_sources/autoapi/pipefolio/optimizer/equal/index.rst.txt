@@ -1,0 +1,60 @@
+pipefolio.optimizer.equal
+=========================
+
+.. py:module:: pipefolio.optimizer.equal
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.optimizer.equal.EqualWeightOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: EqualWeightOptimizer
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.equal.EqualWeightOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the EqualWeighted optimization model from skfolio.
+
+   This optimizer will use the EqualWeighted optimization model from skfolio to
+   optimize the weights of the input data. The optimization model is initialized
+   in the constructor and fit to the data using the `fit` method.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the EqualWeighted model to the provided data.
+
+      :param X: The input data to fit the model.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted EqualWeighted model.
+      :rtype: EqualWeighted
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the EqualWeighted model with the provided data.
+
+      :param X: The input data for making predictions.
+      :type X: DataPlaceHolder
+
+      :returns: The predictions made by the EqualWeighted model.
+
+
+

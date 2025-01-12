@@ -1,0 +1,50 @@
+pipefolio.adaptor.weight_map
+============================
+
+.. py:module:: pipefolio.adaptor.weight_map
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.adaptor.weight_map.WeightMappingAdaptor
+
+
+Module Contents
+---------------
+
+.. py:class:: WeightMappingAdaptor
+
+   Bases: :py:obj:`pipefolio.mixins.AdaptorPipeMixin`, :py:obj:`sklearn.base.TransformerMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.adaptor.weight_map.WeightMappingAdaptor
+      :parts: 1
+      :private-bases:
+
+
+   Convert optimization result's weights to a dictionary mapping feature names to weights.
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the adaptor.
+
+      :param X: Optimization result.
+      :param y: Unused.
+
+      :returns: Self.
+
+
+
+   .. py:method:: transform(X)
+
+      Transform the optimization result's weights to a dictionary mapping feature names to weights.
+
+      :param X: Optimization result.
+
+      :returns: A dictionary mapping feature names to weights.
+
+
+

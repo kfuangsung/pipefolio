@@ -1,0 +1,88 @@
+pipefolio.selector.avg_trade_value
+==================================
+
+.. py:module:: pipefolio.selector.avg_trade_value
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.selector.avg_trade_value.AverageTradeValueSelector
+
+
+Module Contents
+---------------
+
+.. py:class:: AverageTradeValueSelector(n, mode = SelectMode.LARGEST)
+
+   Bases: :py:obj:`pipefolio.mixins.SelectorPipeMixin`, :py:obj:`sklearn.base.TransformerMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.selector.avg_trade_value.AverageTradeValueSelector
+      :parts: 1
+      :private-bases:
+
+
+   Selector to choose assets based on their average trade value.
+
+   This selector computes the average trade value of asset returns and selects
+   the top or bottom `n` assets based on the specified selection mode.
+
+   .. attribute:: n
+
+      Number of assets to select.
+
+      :type: int
+
+   .. attribute:: mode
+
+      Selection mode to determine whether to select the largest or smallest average trade values.
+
+      :type: SelectMode
+
+
+   .. py:attribute:: n
+
+
+   .. py:attribute:: mode
+
+
+   .. py:method:: _select(data)
+
+      Select assets based on average trade value.
+
+      :param data: Input data containing price information.
+      :type data: DataPlaceHolder
+
+      :returns: Selected assets indexed by asset identifiers.
+      :rtype: pd.Series
+
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the selector.
+
+      :param X: The input data to fit.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted selector.
+      :rtype: Self
+
+
+
+   .. py:method:: transform(X, y=None)
+
+      Transform the input data by selecting based on average trade value.
+
+      :param X: The input data to transform.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The transformed data with selected assets.
+      :rtype: DataPlaceHolder
+
+
+

@@ -1,0 +1,66 @@
+pipefolio.optimizer.risk_averse
+===============================
+
+.. py:module:: pipefolio.optimizer.risk_averse
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.optimizer.risk_averse.RiskAverseOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: RiskAverseOptimizer(risk_metric = RiskMetric.VARIANCE, risk_aversion = 1.0, min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.risk_averse.RiskAverseOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the MeanRisk optimization model to maximize utility
+   while considering risk aversion.
+
+   The optimization model is initialized in the constructor and fit to the data
+   using the `fit` method.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+   :param risk_metric: The risk metric to use for optimization.
+   :param risk_aversion: The level of risk aversion in the optimization.
+   :param min_weights: The minimum weights for the optimization.
+   :param max_weights: The maximum weights for the optimization.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted RiskAverseOptimizer model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+

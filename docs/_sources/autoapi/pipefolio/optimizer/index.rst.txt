@@ -1,0 +1,353 @@
+pipefolio.optimizer
+===================
+
+.. py:module:: pipefolio.optimizer
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/pipefolio/optimizer/equal/index
+   /autoapi/pipefolio/optimizer/inverse_vlty/index
+   /autoapi/pipefolio/optimizer/max_ratio/index
+   /autoapi/pipefolio/optimizer/max_ret/index
+   /autoapi/pipefolio/optimizer/mean_risk/index
+   /autoapi/pipefolio/optimizer/min_risk/index
+   /autoapi/pipefolio/optimizer/risk_averse/index
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.optimizer.EqualWeightOptimizer
+   pipefolio.optimizer.InverseVolatilityOptimizer
+   pipefolio.optimizer.MaxRatioOptimizer
+   pipefolio.optimizer.MaxReturnOptimizer
+   pipefolio.optimizer.MeanRiskOptimizer
+   pipefolio.optimizer.MinRiskOptimizer
+   pipefolio.optimizer.RiskAverseOptimizer
+
+
+Package Contents
+----------------
+
+.. py:class:: EqualWeightOptimizer
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.EqualWeightOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the EqualWeighted optimization model from skfolio.
+
+   This optimizer will use the EqualWeighted optimization model from skfolio to
+   optimize the weights of the input data. The optimization model is initialized
+   in the constructor and fit to the data using the `fit` method.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the EqualWeighted model to the provided data.
+
+      :param X: The input data to fit the model.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted EqualWeighted model.
+      :rtype: EqualWeighted
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the EqualWeighted model with the provided data.
+
+      :param X: The input data for making predictions.
+      :type X: DataPlaceHolder
+
+      :returns: The predictions made by the EqualWeighted model.
+
+
+
+.. py:class:: InverseVolatilityOptimizer
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.InverseVolatilityOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the Inverse Volatility optimization model from skfolio.
+
+   This optimizer utilizes the Inverse Volatility optimization model to
+   allocate weights inversely proportional to the volatility of the assets.
+
+   .. attribute:: model
+
+      An instance of the InverseVolatility optimization model.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the InverseVolatility model to the provided data.
+
+      :param X: The input data to fit the model.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted InverseVolatility model.
+      :rtype: InverseVolatility
+
+
+
+   .. py:method:: predict(X)
+
+      Predict using the InverseVolatility model with the provided data.
+
+      :param X: The input data for making predictions.
+      :type X: DataPlaceHolder
+
+      :returns: The predictions made by the InverseVolatility model.
+
+
+
+.. py:class:: MaxRatioOptimizer(risk_metric = RiskMetric.VARIANCE, min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.MaxRatioOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the MeanRisk optimization model from skfolio to maximize the ratio of return to risk.
+
+   The optimization model is initialized in the constructor and fit to the data using the `fit` method.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted MaxRatioOptimizer model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+
+.. py:class:: MaxReturnOptimizer(min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.MaxReturnOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the MeanRisk optimization model to maximize return.
+
+   The optimization model is initialized in the constructor and fit to the data
+   using the `fit` method.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted MaxReturnOptimizer model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+
+.. py:class:: MeanRiskOptimizer(objective = OptimizeObjective.MINIMIZE_RISK, risk_metric = RiskMetric.VARIANCE, risk_aversion = 1.0, min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.MeanRiskOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer using the MeanRisk model.
+
+   This class is deprecated. Use MaxReturnOptimizer, MinRiskOptimizer, or
+   RiskAverseOptimizer instead.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+   :param objective: The optimization objective.
+   :param risk_metric: The risk metric to use.
+   :param risk_aversion: The level of risk aversion.
+   :param min_weights: The minimum weights for the optimization.
+   :param max_weights: The maximum weights for the optimization.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted MeanRisk model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+
+.. py:class:: MinRiskOptimizer(risk_metric = RiskMetric.VARIANCE, min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.MinRiskOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the MeanRisk optimization model from skfolio to minimize risk.
+
+   The optimization model is initialized in the constructor and fit to the data
+   using the `fit` method.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted MinRiskOptimizer model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+
+.. py:class:: RiskAverseOptimizer(risk_metric = RiskMetric.VARIANCE, risk_aversion = 1.0, min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.RiskAverseOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the MeanRisk optimization model to maximize utility
+   while considering risk aversion.
+
+   The optimization model is initialized in the constructor and fit to the data
+   using the `fit` method.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+   :param risk_metric: The risk metric to use for optimization.
+   :param risk_aversion: The level of risk aversion in the optimization.
+   :param min_weights: The minimum weights for the optimization.
+   :param max_weights: The maximum weights for the optimization.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted RiskAverseOptimizer model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+

@@ -1,0 +1,225 @@
+pipefolio.enums
+===============
+
+.. py:module:: pipefolio.enums
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.enums.DataPeriod
+   pipefolio.enums.SelectMode
+   pipefolio.enums.OptimizeObjective
+   pipefolio.enums.RiskMetric
+
+
+Module Contents
+---------------
+
+.. py:class:: DataPeriod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+   .. autoapi-inheritance-diagram:: pipefolio.enums.DataPeriod
+      :parts: 1
+      :private-bases:
+
+
+   Enum for periodicity of data.
+
+   .. attribute:: DAILY
+
+      Daily periodicity.
+
+   .. attribute:: WEEKLY
+
+      Weekly periodicity.
+
+   .. attribute:: MONTHLY
+
+      Monthly periodicity.
+
+   .. attribute:: QUARTERLY
+
+      Quarterly periodicity.
+
+   .. attribute:: YEARLY
+
+      Yearly periodicity.
+
+
+   .. py:attribute:: DAILY
+      :value: 'daily'
+
+
+
+   .. py:attribute:: WEEKLY
+      :value: 'weekly'
+
+
+
+   .. py:attribute:: MONTHLY
+      :value: 'monthly'
+
+
+
+   .. py:attribute:: QUARTERLY
+      :value: 'quarterly'
+
+
+
+   .. py:attribute:: YEARLY
+      :value: 'yearly'
+
+
+
+.. py:class:: SelectMode(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+   .. autoapi-inheritance-diagram:: pipefolio.enums.SelectMode
+      :parts: 1
+      :private-bases:
+
+
+   Enum for selection modes.
+
+   .. attribute:: LARGEST
+
+      Select the largest values.
+
+   .. attribute:: SMALLEST
+
+      Select the smallest values.
+
+
+   .. py:attribute:: LARGEST
+
+
+   .. py:attribute:: SMALLEST
+
+
+.. py:class:: OptimizeObjective(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+   .. autoapi-inheritance-diagram:: pipefolio.enums.OptimizeObjective
+      :parts: 1
+      :private-bases:
+
+
+   Enum for optimization objectives.
+
+   .. attribute:: MINIMIZE_RISK
+
+      Minimize risk.
+
+   .. attribute:: MAXIMIZE_RETURN
+
+      Maximize return.
+
+   .. attribute:: MAXIMIZE_UTILITY
+
+      Maximize utility (return minus risk).
+
+   .. attribute:: MAXIMIZE_RATIO
+
+      Maximize the ratio of return to risk.
+
+
+   .. py:attribute:: MINIMIZE_RISK
+
+
+   .. py:attribute:: MAXIMIZE_RETURN
+
+
+   .. py:attribute:: MAXIMIZE_UTILITY
+
+
+   .. py:attribute:: MAXIMIZE_RATIO
+
+
+.. py:class:: RiskMetric(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+   .. autoapi-inheritance-diagram:: pipefolio.enums.RiskMetric
+      :parts: 1
+      :private-bases:
+
+
+   Enum for risk metrics.
+
+   .. attribute:: VARIANCE
+
+      Variance
+
+   .. attribute:: SEMI_VARIANCE
+
+      Semi-variance
+
+   .. attribute:: STANDARD_DEVIATION
+
+      Standard deviation
+
+   .. attribute:: SEMI_DEVIATION
+
+      Semi-deviation
+
+   .. attribute:: MEAN_ABSOLUTE_DEVIATION
+
+      Mean absolute deviation
+
+   .. attribute:: CVAR
+
+      Conditional value at risk
+
+   .. attribute:: CDAR
+
+      Conditional drawdown at risk
+
+   .. attribute:: WORST_REALIZATION
+
+      Worst realization
+
+   .. attribute:: MAX_DRAWDOWN
+
+      Maximum drawdown
+
+   .. attribute:: AVERAGE_DRAWDOWN
+
+      Average drawdown
+
+
+   .. py:attribute:: VARIANCE
+
+
+   .. py:attribute:: SEMI_VARIANCE
+
+
+   .. py:attribute:: STANDARD_DEVIATION
+
+
+   .. py:attribute:: SEMI_DEVIATION
+
+
+   .. py:attribute:: MEAN_ABSOLUTE_DEVIATION
+
+
+   .. py:attribute:: CVAR
+
+
+   .. py:attribute:: CDAR
+
+
+   .. py:attribute:: WORST_REALIZATION
+
+
+   .. py:attribute:: MAX_DRAWDOWN
+
+
+   .. py:attribute:: AVERAGE_DRAWDOWN
+
+

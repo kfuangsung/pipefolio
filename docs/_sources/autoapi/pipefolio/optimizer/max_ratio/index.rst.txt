@@ -1,0 +1,59 @@
+pipefolio.optimizer.max_ratio
+=============================
+
+.. py:module:: pipefolio.optimizer.max_ratio
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.optimizer.max_ratio.MaxRatioOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: MaxRatioOptimizer(risk_metric = RiskMetric.VARIANCE, min_weights = 0.0, max_weights = 1.0)
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.max_ratio.MaxRatioOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the MeanRisk optimization model from skfolio to maximize the ratio of return to risk.
+
+   The optimization model is initialized in the constructor and fit to the data using the `fit` method.
+
+   .. attribute:: model
+
+      The MeanRisk optimization model.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fits the MeanRisk model to the provided data.
+
+      :param X: The input data to fit the model.
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted MaxRatioOptimizer model.
+
+
+
+   .. py:method:: predict(X)
+
+      Predicts using the MeanRisk model with the provided data.
+
+      :param X: The input data for making predictions.
+
+      :returns: The predictions made by the MeanRisk model.
+
+
+

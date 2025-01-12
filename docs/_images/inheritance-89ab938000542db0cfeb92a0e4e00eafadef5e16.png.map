@@ -1,0 +1,7 @@
+<map id="inheritance5db3cc1f2d" name="inheritance5db3cc1f2d">
+<area shape="rect" id="node1" title="Base class for all estimators in scikit&#45;learn." alt="" coords="299,55,417,80"/>
+<area shape="rect" id="node4" href="max_ret/index.html#pipefolio.optimizer.max_ret.MaxReturnOptimizer" target="_top" title="Optimizer that uses the MeanRisk optimization model to maximize return." alt="" coords="481,31,639,56"/>
+<area shape="rect" id="node2" title="Mixin class allowing to generate a link to the API documentation." alt="" coords="5,29,235,55"/>
+<area shape="rect" id="node3" title="Mixin class for adding metadata request functionality." alt="" coords="41,79,199,104"/>
+<area shape="rect" id="node5" href="../mixins/index.html#pipefolio.mixins.OptimizerPipeMixin" target="_top" title="OptimizerPipeMixin class that provides a reverse pipe operator for optimization classes." alt="" coords="283,5,433,31"/>
+</map>

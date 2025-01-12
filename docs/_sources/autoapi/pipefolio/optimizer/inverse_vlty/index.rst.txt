@@ -1,0 +1,63 @@
+pipefolio.optimizer.inverse_vlty
+================================
+
+.. py:module:: pipefolio.optimizer.inverse_vlty
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.optimizer.inverse_vlty.InverseVolatilityOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: InverseVolatilityOptimizer
+
+   Bases: :py:obj:`pipefolio.mixins.OptimizerPipeMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.optimizer.inverse_vlty.InverseVolatilityOptimizer
+      :parts: 1
+      :private-bases:
+
+
+   Optimizer that uses the Inverse Volatility optimization model from skfolio.
+
+   This optimizer utilizes the Inverse Volatility optimization model to
+   allocate weights inversely proportional to the volatility of the assets.
+
+   .. attribute:: model
+
+      An instance of the InverseVolatility optimization model.
+
+
+   .. py:attribute:: model
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the InverseVolatility model to the provided data.
+
+      :param X: The input data to fit the model.
+      :type X: DataPlaceHolder
+      :param y: Optional additional data (unused).
+
+      :returns: The fitted InverseVolatility model.
+      :rtype: InverseVolatility
+
+
+
+   .. py:method:: predict(X)
+
+      Predict using the InverseVolatility model with the provided data.
+
+      :param X: The input data for making predictions.
+      :type X: DataPlaceHolder
+
+      :returns: The predictions made by the InverseVolatility model.
+
+
+

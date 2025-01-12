@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pipefolio.enums &#8212; Pipefolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'autoapi/pipefolio/enums/index';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="pipefolio.mixins" href="../mixins/index.html" />
+    <link rel="prev" title="pipefolio.data" href="../data/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Pipefolio</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/kfuangsung/pipefolio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/kfuangsung/pipefolio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">pipefolio</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../adaptor/index.html">pipefolio.adaptor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../adaptor/weight_arr/index.html">pipefolio.adaptor.weight_arr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../adaptor/weight_map/index.html">pipefolio.adaptor.weight_map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">pipefolio.data</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">pipefolio.enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mixins/index.html">pipefolio.mixins</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../optimizer/index.html">pipefolio.optimizer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/equal/index.html">pipefolio.optimizer.equal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/inverse_vlty/index.html">pipefolio.optimizer.inverse_vlty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/max_ratio/index.html">pipefolio.optimizer.max_ratio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/max_ret/index.html">pipefolio.optimizer.max_ret</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/mean_risk/index.html">pipefolio.optimizer.mean_risk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/min_risk/index.html">pipefolio.optimizer.min_risk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/risk_averse/index.html">pipefolio.optimizer.risk_averse</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../selector/index.html">pipefolio.selector</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../selector/ann_vlty/index.html">pipefolio.selector.ann_vlty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selector/avg_trade_value/index.html">pipefolio.selector.avg_trade_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selector/tot_ret/index.html">pipefolio.selector.tot_ret</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../transformer/index.html">pipefolio.transformer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transformer/price_to_return/index.html">pipefolio.transformer.price_to_return</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">pipefolio</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">pipefolio.enums</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-pipefolio.enums">
+<span id="pipefolio-enums"></span><h1>pipefolio.enums<a class="headerlink" href="#module-pipefolio.enums" title="Link to this heading">#</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pipefolio.enums.DataPeriod" title="pipefolio.enums.DataPeriod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataPeriod</span></code></a></p></td>
+<td><p>Enum for periodicity of data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pipefolio.enums.SelectMode" title="pipefolio.enums.SelectMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelectMode</span></code></a></p></td>
+<td><p>Enum for selection modes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pipefolio.enums.OptimizeObjective" title="pipefolio.enums.OptimizeObjective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizeObjective</span></code></a></p></td>
+<td><p>Enum for optimization objectives.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pipefolio.enums.RiskMetric" title="pipefolio.enums.RiskMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiskMetric</span></code></a></p></td>
+<td><p>Enum for risk metrics.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.enums.DataPeriod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.enums.</span></span><span class="sig-name descname"><span class="pre">DataPeriod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.enums.DataPeriod" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-29dd78d71114a52f267e00db80bfe0228732619c.png" alt="Inheritance diagram of pipefolio.enums.DataPeriod" usemap="#inheritance3d5d027e39" class="inheritance graphviz" /></div>
+<map id="inheritance3d5d027e39" name="inheritance3d5d027e39">
+<area shape="rect" id="node1" href="#pipefolio.enums.DataPeriod" target="_top" title="Enum for periodicity of data." alt="" coords="125,5,220,31"/>
+</map><p>Enum for periodicity of data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.DataPeriod.DAILY">
+<span class="sig-name descname"><span class="pre">DAILY</span></span><a class="headerlink" href="#pipefolio.enums.DataPeriod.DAILY" title="Link to this definition">#</a></dt>
+<dd><p>Daily periodicity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.DataPeriod.WEEKLY">
+<span class="sig-name descname"><span class="pre">WEEKLY</span></span><a class="headerlink" href="#pipefolio.enums.DataPeriod.WEEKLY" title="Link to this definition">#</a></dt>
+<dd><p>Weekly periodicity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.DataPeriod.MONTHLY">
+<span class="sig-name descname"><span class="pre">MONTHLY</span></span><a class="headerlink" href="#pipefolio.enums.DataPeriod.MONTHLY" title="Link to this definition">#</a></dt>
+<dd><p>Monthly periodicity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.DataPeriod.QUARTERLY">
+<span class="sig-name descname"><span class="pre">QUARTERLY</span></span><a class="headerlink" href="#pipefolio.enums.DataPeriod.QUARTERLY" title="Link to this definition">#</a></dt>
+<dd><p>Quarterly periodicity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.DataPeriod.YEARLY">
+<span class="sig-name descname"><span class="pre">YEARLY</span></span><a class="headerlink" href="#pipefolio.enums.DataPeriod.YEARLY" title="Link to this definition">#</a></dt>
+<dd><p>Yearly periodicity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">DAILY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'daily'</span></em><a class="headerlink" href="#id0" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">WEEKLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'weekly'</span></em><a class="headerlink" href="#id1" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">MONTHLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'monthly'</span></em><a class="headerlink" href="#id2" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">QUARTERLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'quarterly'</span></em><a class="headerlink" href="#id3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">YEARLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'yearly'</span></em><a class="headerlink" href="#id4" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.enums.SelectMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.enums.</span></span><span class="sig-name descname"><span class="pre">SelectMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.enums.SelectMode" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-e12bf6e770c3a2b5851a2a744c386617a845255e.png" alt="Inheritance diagram of pipefolio.enums.SelectMode" usemap="#inheritance36427261be" class="inheritance graphviz" /></div>
+<map id="inheritance36427261be" name="inheritance36427261be">
+<area shape="rect" id="node2" href="#pipefolio.enums.SelectMode" target="_top" title="Enum for selection modes." alt="" coords="125,5,224,31"/>
+</map><p>Enum for selection modes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.SelectMode.LARGEST">
+<span class="sig-name descname"><span class="pre">LARGEST</span></span><a class="headerlink" href="#pipefolio.enums.SelectMode.LARGEST" title="Link to this definition">#</a></dt>
+<dd><p>Select the largest values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.SelectMode.SMALLEST">
+<span class="sig-name descname"><span class="pre">SMALLEST</span></span><a class="headerlink" href="#pipefolio.enums.SelectMode.SMALLEST" title="Link to this definition">#</a></dt>
+<dd><p>Select the smallest values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">LARGEST</span></span><a class="headerlink" href="#id5" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">SMALLEST</span></span><a class="headerlink" href="#id6" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.enums.OptimizeObjective">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.enums.</span></span><span class="sig-name descname"><span class="pre">OptimizeObjective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.enums.OptimizeObjective" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-15fa2174aa8c4c2666e3c3df8adff1ae66ab16f2.png" alt="Inheritance diagram of pipefolio.enums.OptimizeObjective" usemap="#inheritancec0e83038f9" class="inheritance graphviz" /></div>
+<map id="inheritancec0e83038f9" name="inheritancec0e83038f9">
+<area shape="rect" id="node2" href="#pipefolio.enums.OptimizeObjective" target="_top" title="Enum for optimization objectives." alt="" coords="125,5,268,31"/>
+</map><p>Enum for optimization objectives.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.OptimizeObjective.MINIMIZE_RISK">
+<span class="sig-name descname"><span class="pre">MINIMIZE_RISK</span></span><a class="headerlink" href="#pipefolio.enums.OptimizeObjective.MINIMIZE_RISK" title="Link to this definition">#</a></dt>
+<dd><p>Minimize risk.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.OptimizeObjective.MAXIMIZE_RETURN">
+<span class="sig-name descname"><span class="pre">MAXIMIZE_RETURN</span></span><a class="headerlink" href="#pipefolio.enums.OptimizeObjective.MAXIMIZE_RETURN" title="Link to this definition">#</a></dt>
+<dd><p>Maximize return.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.OptimizeObjective.MAXIMIZE_UTILITY">
+<span class="sig-name descname"><span class="pre">MAXIMIZE_UTILITY</span></span><a class="headerlink" href="#pipefolio.enums.OptimizeObjective.MAXIMIZE_UTILITY" title="Link to this definition">#</a></dt>
+<dd><p>Maximize utility (return minus risk).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.OptimizeObjective.MAXIMIZE_RATIO">
+<span class="sig-name descname"><span class="pre">MAXIMIZE_RATIO</span></span><a class="headerlink" href="#pipefolio.enums.OptimizeObjective.MAXIMIZE_RATIO" title="Link to this definition">#</a></dt>
+<dd><p>Maximize the ratio of return to risk.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">MINIMIZE_RISK</span></span><a class="headerlink" href="#id7" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">MAXIMIZE_RETURN</span></span><a class="headerlink" href="#id8" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">MAXIMIZE_UTILITY</span></span><a class="headerlink" href="#id9" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">MAXIMIZE_RATIO</span></span><a class="headerlink" href="#id10" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pipefolio.enums.</span></span><span class="sig-name descname"><span class="pre">RiskMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pipefolio.enums.RiskMetric" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<div class="graphviz"><img src="../../../_images/inheritance-97bd6213f8fa2b607236ad230436c6c41d72949a.png" alt="Inheritance diagram of pipefolio.enums.RiskMetric" usemap="#inheritance2ec6289a6b" class="inheritance graphviz" /></div>
+<map id="inheritance2ec6289a6b" name="inheritance2ec6289a6b">
+<area shape="rect" id="node2" href="#pipefolio.enums.RiskMetric" target="_top" title="Enum for risk metrics." alt="" coords="125,5,216,31"/>
+</map><p>Enum for risk metrics.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.VARIANCE">
+<span class="sig-name descname"><span class="pre">VARIANCE</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.VARIANCE" title="Link to this definition">#</a></dt>
+<dd><p>Variance</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.SEMI_VARIANCE">
+<span class="sig-name descname"><span class="pre">SEMI_VARIANCE</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.SEMI_VARIANCE" title="Link to this definition">#</a></dt>
+<dd><p>Semi-variance</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.STANDARD_DEVIATION">
+<span class="sig-name descname"><span class="pre">STANDARD_DEVIATION</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.STANDARD_DEVIATION" title="Link to this definition">#</a></dt>
+<dd><p>Standard deviation</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.SEMI_DEVIATION">
+<span class="sig-name descname"><span class="pre">SEMI_DEVIATION</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.SEMI_DEVIATION" title="Link to this definition">#</a></dt>
+<dd><p>Semi-deviation</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.MEAN_ABSOLUTE_DEVIATION">
+<span class="sig-name descname"><span class="pre">MEAN_ABSOLUTE_DEVIATION</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.MEAN_ABSOLUTE_DEVIATION" title="Link to this definition">#</a></dt>
+<dd><p>Mean absolute deviation</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.CVAR">
+<span class="sig-name descname"><span class="pre">CVAR</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.CVAR" title="Link to this definition">#</a></dt>
+<dd><p>Conditional value at risk</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.CDAR">
+<span class="sig-name descname"><span class="pre">CDAR</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.CDAR" title="Link to this definition">#</a></dt>
+<dd><p>Conditional drawdown at risk</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.WORST_REALIZATION">
+<span class="sig-name descname"><span class="pre">WORST_REALIZATION</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.WORST_REALIZATION" title="Link to this definition">#</a></dt>
+<dd><p>Worst realization</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.MAX_DRAWDOWN">
+<span class="sig-name descname"><span class="pre">MAX_DRAWDOWN</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.MAX_DRAWDOWN" title="Link to this definition">#</a></dt>
+<dd><p>Maximum drawdown</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pipefolio.enums.RiskMetric.AVERAGE_DRAWDOWN">
+<span class="sig-name descname"><span class="pre">AVERAGE_DRAWDOWN</span></span><a class="headerlink" href="#pipefolio.enums.RiskMetric.AVERAGE_DRAWDOWN" title="Link to this definition">#</a></dt>
+<dd><p>Average drawdown</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">VARIANCE</span></span><a class="headerlink" href="#id11" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">SEMI_VARIANCE</span></span><a class="headerlink" href="#id12" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">STANDARD_DEVIATION</span></span><a class="headerlink" href="#id13" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">SEMI_DEVIATION</span></span><a class="headerlink" href="#id14" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">MEAN_ABSOLUTE_DEVIATION</span></span><a class="headerlink" href="#id15" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">CVAR</span></span><a class="headerlink" href="#id16" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">CDAR</span></span><a class="headerlink" href="#id17" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">WORST_REALIZATION</span></span><a class="headerlink" href="#id18" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">MAX_DRAWDOWN</span></span><a class="headerlink" href="#id19" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">AVERAGE_DRAWDOWN</span></span><a class="headerlink" href="#id20" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../data/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">pipefolio.data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../mixins/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pipefolio.mixins</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.DataPeriod"><code class="docutils literal notranslate"><span class="pre">DataPeriod</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.DataPeriod.DAILY"><code class="docutils literal notranslate"><span class="pre">DataPeriod.DAILY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.DataPeriod.WEEKLY"><code class="docutils literal notranslate"><span class="pre">DataPeriod.WEEKLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.DataPeriod.MONTHLY"><code class="docutils literal notranslate"><span class="pre">DataPeriod.MONTHLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.DataPeriod.QUARTERLY"><code class="docutils literal notranslate"><span class="pre">DataPeriod.QUARTERLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.DataPeriod.YEARLY"><code class="docutils literal notranslate"><span class="pre">DataPeriod.YEARLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">DataPeriod.DAILY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><code class="docutils literal notranslate"><span class="pre">DataPeriod.WEEKLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><code class="docutils literal notranslate"><span class="pre">DataPeriod.MONTHLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">DataPeriod.QUARTERLY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><code class="docutils literal notranslate"><span class="pre">DataPeriod.YEARLY</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.SelectMode"><code class="docutils literal notranslate"><span class="pre">SelectMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.SelectMode.LARGEST"><code class="docutils literal notranslate"><span class="pre">SelectMode.LARGEST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.SelectMode.SMALLEST"><code class="docutils literal notranslate"><span class="pre">SelectMode.SMALLEST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><code class="docutils literal notranslate"><span class="pre">SelectMode.LARGEST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><code class="docutils literal notranslate"><span class="pre">SelectMode.SMALLEST</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.OptimizeObjective"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.OptimizeObjective.MINIMIZE_RISK"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MINIMIZE_RISK</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.OptimizeObjective.MAXIMIZE_RETURN"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MAXIMIZE_RETURN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.OptimizeObjective.MAXIMIZE_UTILITY"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MAXIMIZE_UTILITY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.OptimizeObjective.MAXIMIZE_RATIO"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MAXIMIZE_RATIO</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MINIMIZE_RISK</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MAXIMIZE_RETURN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MAXIMIZE_UTILITY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><code class="docutils literal notranslate"><span class="pre">OptimizeObjective.MAXIMIZE_RATIO</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric"><code class="docutils literal notranslate"><span class="pre">RiskMetric</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.VARIANCE"><code class="docutils literal notranslate"><span class="pre">RiskMetric.VARIANCE</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.SEMI_VARIANCE"><code class="docutils literal notranslate"><span class="pre">RiskMetric.SEMI_VARIANCE</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.STANDARD_DEVIATION"><code class="docutils literal notranslate"><span class="pre">RiskMetric.STANDARD_DEVIATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.SEMI_DEVIATION"><code class="docutils literal notranslate"><span class="pre">RiskMetric.SEMI_DEVIATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.MEAN_ABSOLUTE_DEVIATION"><code class="docutils literal notranslate"><span class="pre">RiskMetric.MEAN_ABSOLUTE_DEVIATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.CVAR"><code class="docutils literal notranslate"><span class="pre">RiskMetric.CVAR</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.CDAR"><code class="docutils literal notranslate"><span class="pre">RiskMetric.CDAR</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.WORST_REALIZATION"><code class="docutils literal notranslate"><span class="pre">RiskMetric.WORST_REALIZATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.MAX_DRAWDOWN"><code class="docutils literal notranslate"><span class="pre">RiskMetric.MAX_DRAWDOWN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pipefolio.enums.RiskMetric.AVERAGE_DRAWDOWN"><code class="docutils literal notranslate"><span class="pre">RiskMetric.AVERAGE_DRAWDOWN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><code class="docutils literal notranslate"><span class="pre">RiskMetric.VARIANCE</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><code class="docutils literal notranslate"><span class="pre">RiskMetric.SEMI_VARIANCE</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><code class="docutils literal notranslate"><span class="pre">RiskMetric.STANDARD_DEVIATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><code class="docutils literal notranslate"><span class="pre">RiskMetric.SEMI_DEVIATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><code class="docutils literal notranslate"><span class="pre">RiskMetric.MEAN_ABSOLUTE_DEVIATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16"><code class="docutils literal notranslate"><span class="pre">RiskMetric.CVAR</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><code class="docutils literal notranslate"><span class="pre">RiskMetric.CDAR</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18"><code class="docutils literal notranslate"><span class="pre">RiskMetric.WORST_REALIZATION</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19"><code class="docutils literal notranslate"><span class="pre">RiskMetric.MAX_DRAWDOWN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><code class="docutils literal notranslate"><span class="pre">RiskMetric.AVERAGE_DRAWDOWN</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/pipefolio/enums/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Kachain Fuangsung.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

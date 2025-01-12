@@ -1,0 +1,57 @@
+pipefolio.adaptor.weight_arr
+============================
+
+.. py:module:: pipefolio.adaptor.weight_arr
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.adaptor.weight_arr.WeightArrayAdaptor
+
+
+Module Contents
+---------------
+
+.. py:class:: WeightArrayAdaptor
+
+   Bases: :py:obj:`pipefolio.mixins.AdaptorPipeMixin`, :py:obj:`sklearn.base.TransformerMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.adaptor.weight_arr.WeightArrayAdaptor
+      :parts: 1
+      :private-bases:
+
+
+   Adaptor to convert optimization result's weights to a numpy array.
+
+   This adaptor is useful when the weights of the optimization result are
+   needed as a numpy array for further processing.
+
+   .. attribute:: None
+
+      
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the WeightArrayAdaptor.
+
+      :param X: The optimization result.
+      :param y: Unused.
+
+      :returns: Self.
+
+
+
+   .. py:method:: transform(X)
+
+      Transform the optimization result's weights to a numpy array.
+
+      :param X: The optimization result.
+
+      :returns: A numpy array of shape (n_features,) containing the weights.
+
+
+

@@ -1,0 +1,101 @@
+pipefolio.adaptor
+=================
+
+.. py:module:: pipefolio.adaptor
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/pipefolio/adaptor/weight_arr/index
+   /autoapi/pipefolio/adaptor/weight_map/index
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   pipefolio.adaptor.WeightArrayAdaptor
+   pipefolio.adaptor.WeightMappingAdaptor
+
+
+Package Contents
+----------------
+
+.. py:class:: WeightArrayAdaptor
+
+   Bases: :py:obj:`pipefolio.mixins.AdaptorPipeMixin`, :py:obj:`sklearn.base.TransformerMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.adaptor.WeightArrayAdaptor
+      :parts: 1
+      :private-bases:
+
+
+   Adaptor to convert optimization result's weights to a numpy array.
+
+   This adaptor is useful when the weights of the optimization result are
+   needed as a numpy array for further processing.
+
+   .. attribute:: None
+
+      
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the WeightArrayAdaptor.
+
+      :param X: The optimization result.
+      :param y: Unused.
+
+      :returns: Self.
+
+
+
+   .. py:method:: transform(X)
+
+      Transform the optimization result's weights to a numpy array.
+
+      :param X: The optimization result.
+
+      :returns: A numpy array of shape (n_features,) containing the weights.
+
+
+
+.. py:class:: WeightMappingAdaptor
+
+   Bases: :py:obj:`pipefolio.mixins.AdaptorPipeMixin`, :py:obj:`sklearn.base.TransformerMixin`, :py:obj:`sklearn.base.BaseEstimator`
+
+   .. autoapi-inheritance-diagram:: pipefolio.adaptor.WeightMappingAdaptor
+      :parts: 1
+      :private-bases:
+
+
+   Convert optimization result's weights to a dictionary mapping feature names to weights.
+
+
+   .. py:method:: fit(X, y=None)
+
+      Fit the adaptor.
+
+      :param X: Optimization result.
+      :param y: Unused.
+
+      :returns: Self.
+
+
+
+   .. py:method:: transform(X)
+
+      Transform the optimization result's weights to a dictionary mapping feature names to weights.
+
+      :param X: Optimization result.
+
+      :returns: A dictionary mapping feature names to weights.
+
+
+
