@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "pipefolio"
 authors = [{ name = "Kachain Fuangsung" }, { email = "kachain.f@outlook.com" }]
 description = "A Pipeline-Oriented Portfolio Optimization Framework"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.12"
 keywords = []
 license = { file = "LICENSE" }
