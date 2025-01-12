@@ -6,7 +6,7 @@
 pipefolio documentation
 =======================
 
-.. image:: ../_static/pipefolio-logo.png
+.. image:: https://raw.githubusercontent.com/kfuangsung/pipefolio/refs/heads/main/docs/_static/pipefolio-logo.png
 
 **Pipefolio** is a Python-based portfolio optimization framework designed with a pipeline-oriented approach. While several excellent Python libraries for portfolio optimization already exist—such as `PyPortfolioOpt <https://github.com/robertmartin8/PyPortfolioOpt>`_, `Riskfolio-Lib <https://github.com/dcajasn/Riskfolio-Lib>`_, and `skfolio <https://github.com/skfolio/skfolio>`_—Pipefolio takes a different direction.
 
